@@ -2,13 +2,77 @@
 <html>
 <head>
 
-	<style type="text/css"></style>
 	<title>Super nine</title>
 	<style type="text/css">
-		
+	accountbalance
 body{
 	background-image: url("C:\Users\Mackachila\Pictures\webpage2.jpg");
+} 
+.footer{
+	position: all;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	flex-flow: row wrap;
+	padding: 50px;
+	color: #fff;
+	background-color: #25242a; 
 }
+.footer-bottom img{
+	width: 15%;
+}
+.footer ul{
+	list-style: none;
+	padding-left: 0;
+}
+.footer li{
+	line-height: 2em;
+}
+.footer a{
+	text-decoration: none;
+}
+
+.box a{
+	color: #999;
+}
+.footer-bottom{
+	text-align: center;
+	color: #999;
+	padding-top: 50px;
+}
+.left-area{
+	padding-right: 150px;
+}
+.right-area{
+	padding-right: 150px;
+}
+.cocials{
+	
+}
+.socials a{
+	background: darkorange;
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	margin-right: 10px; 
+}
+.socials a i{
+	color: #e7f2f4;
+	padding: 10px 12px;
+	font-size: 20px;
+
+}
+.btn{
+	border: none;
+	background: darkorange;
+	color: #fff;
+	padding: 10px 30px; 
+}
+.search-box input{
+	height: 36px;
+}
+
 		#txt1{ 
 			width: 700px;
 			height: 80px;
@@ -20,7 +84,79 @@ body{
 			font-family: Arial Black;
 			color: green;
 		}
+ #confirmform{
+		display: none;
+		}
+		#add{
+		display: none;
+		}
+		#confirm{
+		width: 60%;
+		border-style: none;
+		pointer-events: none;
+		background-color: whitesmoke;
+		font-size: 37%;
+		}
+		#ok{
+		border-color: tomato;
+		}
+		#randomfield{
+		cursor: not-allowed
+		}
+		#depositing{
+		display: none;
+		border-style: solid;
+		border-color: blue;
+		width: 55%;
+		border-radius: 8px;
+		padding: 5px;
+		}
 
+		#phone,#amount,#depo{
+		font-size: 70%;
+		padding: 5px;
+		}
+
+		#depo{
+		font-size: 70%;
+		padding: 5px;
+		width: 100%;
+		background-color: green;
+		color: white;
+		border-style: solid;
+		border-radius: 7px;
+		border-color: green;
+		cursor: pointer;
+		}
+		#cancel{
+		font-size: 70%;
+		padding: 5px;
+		width: 100%;
+		background-color: red;
+		color: white;
+		border-style: solid;
+		border-radius: 7px;
+		border-color: red;
+		cursor: pointer;
+		}
+		.accountdetails{
+		float: right;
+		font-size: 60%;
+		width: 35%;
+		border-style: none;
+		color: blue;
+
+		}
+		#accountbalance, #username{
+		border-style: none;
+		padding: 5px;
+		width: 60%;
+		font-size: 80%;	
+		background-color: whitesmoke;
+		pointer-events: none;
+		font-family: elephant;
+		color: tomato;
+		}
 
 		#formslip{ 
 			width: 120px;
@@ -32,7 +168,7 @@ body{
 					
 				#playform{ 
 			font-size: 70%;
-			
+			background-color: white;
 			display: none;
 					}
 
@@ -52,10 +188,10 @@ body{
 		}
 		#betresult{
 			background-color: silver;
-			width: 90%;
+			width: 146%;
 			pointer-events: none;
 			height: 30px;
-			font-size: 120%;
+			font-size: 110%;
 			border: none;
 		
 
@@ -92,9 +228,13 @@ body{
 			
 
 		}
+		#markets{
+		background-color: silver;
+		
+		}
 
 		#odd, #win{ 
-			width: 140px;
+			width: 176px;
 			height: 30px;
 			font-size: 40px;
 			pointer-events: none;
@@ -110,7 +250,7 @@ body{
         height: 50px;
         margin: 0;
         
-        background-color: lightgray;
+        background-color: silver;
       }
       
       .navbar a {
@@ -132,6 +272,7 @@ body{
         display: none;
         position: absolute;
         color: blue;
+        background-color: silver;
         font-size: 0.1px;
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0.9,0.9);
@@ -147,7 +288,7 @@ body{
       .sidebar {
         height: 100%;
         width: 200px;
-        background-color: lightgray;
+        background-color: silver;
         position: absolute;
         left: 100;
         top: 50px;
@@ -231,8 +372,10 @@ body{
 		}
 	</style>
 </head>
+
 <script>
-   var inputField = document.getElementById("txt1");
+	
+    var inputField = document.getElementById("txt1");
     let numbers = [];
 
     function setNumber(num) {
@@ -247,6 +390,13 @@ body{
      function deleteAll(num) {
       numbers = numbers.filter(n => n == num);
       txt1.value = numbers.join("");
+    }
+  </script>
+
+  <script>
+	
+    function withdraw(){
+    	alert("Withdrawal not allowed for this demo Account. You can only make a virtual deposit for practice");
     }
   </script>
 <script>
@@ -287,6 +437,10 @@ function closeForm() {
 	var seven =document.getElementById("btn7");
 	var eight =document.getElementById("btn8");
 	var nine =document.getElementById("btn9");
+	var win =document.getElementById("win");
+	var add =document.getElementById("add");
+	var accountbalance =document.getElementById("accountbalance");
+	var newbal =document.getElementById("win");
 
 			// Generate 9 random numbers between 1 and 9
 			let randomNumbers = [];
@@ -313,7 +467,11 @@ function closeForm() {
 
 			if(allPresent && pick.value =="Number(s) which will appear"){
 				betresult.style.color = 'green';
-				betresult.value = "WON";
+
+				betresult.value = "WON KSH " + win.value;
+		accountbalance.value = accountbalance.value * 1 + add.value * 1;
+		add.value = 0.
+
 	deleteNumber(1);
 	deleteNumber(2);
 	deleteNumber(3);
@@ -370,7 +528,6 @@ function closeForm() {
 	seven.value="7";
 	eight.value="8";
 	nine.value="9";
-	pick.value="";
 	odd.value="0.00";
 	win.value="0.00";
 	stake.value="10.0"
@@ -406,19 +563,6 @@ function closeForm() {
         
       }
     </script>
-    <script>
-      function set() {
-      	var holder = document.getElementById("holder")
-      	
-
-      	holder.value="Jared";
-        
-      
-       
-      }
-      set();
-  
-    </script>
  <script>
       function displayData() {
 
@@ -443,7 +587,6 @@ function closeForm() {
             break;
           }
 
-
         }
         document.getElementById("output").innerHTML = selectedValue;
         one.value="1";
@@ -455,7 +598,6 @@ function closeForm() {
 	seven.value="7";
 	eight.value="8";
 	nine.value="9";
-	pick.value="";
 	odd.value="0.00";
 	win.value="0.00";
 	stake.value="10.0"
@@ -490,30 +632,50 @@ result.style.color = "black";
       }
     </script>
 <script>
-      var countdown = 60;
+	function confirmation(){
+document.getElementById("confirmform").style.display = "block";
 
+	}
+
+</script>
+<script>
+	function confirmationhide(){
+var ranomfield = document.getElementById("randomfield");
+document.getElementById("confirmform").style.display = "none";
+document.getElementById("randomfield").innerHTML = '';
+
+	}
+</script>
+<script>
+      var countdown = 60;
+    
       function startTimer() {
         var timer = setInterval(function() {
-       
+        var confirm = document.getElementById("confirm");
+        var ranomfield = document.getElementById("randomfield");
+        var placed = document.getElementById("placed");
+        var pick = document.getElementById("pick");
           document.getElementById("timer").innerHTML = "Next game in: " + countdown + " seconds.";
-          document.getElementById("holder").innerHTML = "Jared";
           countdown--;
           if (countdown < 0) {
             clearInterval(timer);
             countdown = 60;
-            document.getElementById("timer").innerHTML = "Game Ended";
+            //document.getElementById("timer").innerHTML = "Game Ended";
+            if(placed.value != ""){
+            	confirmation();
+     confirm.value = "Your bet numbers were '" + placed.value + "' on market:  '" + pick.value + "'  Confirm the outcome below";
+     placed.value = "";
+     pick.value="";
+    
+ }
           }
         }, 1000);
       }
       startTimer();
-     // setInterval(startTimer, 60000);
+     setInterval(startTimer, 60000);
+accountbalance
+
     </script>
-<script>
-	function newgclear(){
-	document.getElementById("randomfield").innerHTML = '';
-	}
-	setInterval(newgclear,58000);
-</script>
 
 <script>
 	function newg(){
@@ -562,6 +724,24 @@ var num3 = Math.floor(Math.random() * 9) + 1;
 	sevenb.style.backgroundColor='black';
 	eightb.style.backgroundColor='black';
 	nineb.style.backgroundColor='black';
+
+
+     deleteNumber(1);
+	deleteNumber(2);
+	deleteNumber(3);
+	deleteNumber(4);
+	deleteNumber(5);
+	deleteNumber(6);
+	deleteNumber(7);
+	deleteNumber(8);
+	deleteNumber(9);
+
+		document.getElementById("placed").style.display = "none";
+document.getElementById("betresult").style.display = "none";
+document.getElementById("sad").style.display = "none";
+document.getElementById("sadd").style.display = "none";
+result.style.color = "black";
+
 	}
 </script>
 <script>
@@ -1012,6 +1192,7 @@ win.value = odd.value * stake.value;
   else if(btn4.value =="4" && pick.value == "Number which will appear first" | pick.value =="Number which will appear last" | pick.value =="A number to appear 4 times" && odd.value == "7.0" |odd.value == "7"){
 	deleteNumber(1);
 	deleteNumber(2);
+	deleteNumber(3);
 	deleteNumber(5);
 	deleteNumber(6);
 	deleteNumber(7);
@@ -1138,6 +1319,7 @@ win.value = odd.value * stake.value;
   else if(btn5.value =="5" && pick.value == "Number which will appear first" | pick.value =="Number which will appear last" | pick.value =="A number to appear 4 times" && odd.value == "7.0" |odd.value == "7"){
 	deleteNumber(1);
 	deleteNumber(2);
+	deleteNumber(3);
 	deleteNumber(4);
 	deleteNumber(6);
 	deleteNumber(7);
@@ -1171,7 +1353,7 @@ odd.value = 2.0;
 win.value = odd.value * stake.value;
   }
   else if(btn5.value =="5" && pick.value == "A number to appear 2 times" && odd.value !== "0.00" |odd.value !== "0"){
-odd.value = odd.value * 2.0;
+odd.value = odd.value * 2.0; 
 win.value = odd.value * stake.value;
   }
   else if(btn5.value ==" 5" && pick.value == "A number to appear 2 times"  && odd.value !== "0.00" |odd.value !== "0" && odd.value !== "2" && odd.value !== "2.0"){
@@ -1265,6 +1447,7 @@ win.value = odd.value * stake.value;
   else if(btn6.value =="6" && pick.value == "Number which will appear first" | pick.value =="Number which will appear last" | pick.value =="A number to appear 4 times" && odd.value == "7.0" |odd.value == "7"){
 	deleteNumber(1);
 	deleteNumber(2);
+	deleteNumber(3);
 	deleteNumber(4);
 	deleteNumber(5);
 	deleteNumber(7);
@@ -1394,6 +1577,7 @@ win.value = odd.value * stake.value;
   else if(btn7.value =="7" && pick.value == "Number which will appear first" | pick.value =="Number which will appear last" | pick.value =="A number to appear 4 times" && odd.value == "7.0" |odd.value == "7"){
 	deleteNumber(1);
 	deleteNumber(2);
+	deleteNumber(3);
 	deleteNumber(4);
 	deleteNumber(5);
 	deleteNumber(6);
@@ -1418,7 +1602,6 @@ win.value = odd.value * stake.value;
 	eightb.style.backgroundColor='black';
 	nineb.style.backgroundColor='black';
   }
-
   else if(btn7.value ==" 7" && pick.value == "Number which will appear first" | pick.value =="Number which will appear last" | pick.value =="A number to appear 4 times"){
 odd.value = 0.00;
 win.value = odd.value * stake.value;
@@ -1521,6 +1704,7 @@ win.value = odd.value * stake.value;
   else if(btn8.value =="8" && pick.value == "Number which will appear first" | pick.value =="Number which will appear last" | pick.value =="A number to appear 4 times" && odd.value == "7.0" |odd.value == "7"){
 	deleteNumber(1);
 	deleteNumber(2);
+	deleteNumber(3);
 	deleteNumber(4);
 	deleteNumber(5);
 	deleteNumber(6);
@@ -1598,7 +1782,7 @@ else if(btn8.value==" 8"){
   }
 }
 function change9() {
-	 	// body...
+	 // body...
 var one =document.getElementById("txt1");
 	var two =document.getElementById("txt2");
 	var three =document.getElementById("txt3");
@@ -1647,6 +1831,7 @@ win.value = odd.value * stake.value;
   else if(btn9.value =="9" && pick.value == "Number which will appear first" | pick.value =="Number which will appear last" | pick.value =="A number to appear 4 times" && odd.value == "7.0" |odd.value == "7"){
 	deleteNumber(1);
 	deleteNumber(2);
+	deleteNumber(3);
 	deleteNumber(4);
 	deleteNumber(5);
 	deleteNumber(6);
@@ -1727,42 +1912,104 @@ else if(btn9.value==" 9"){
 
 </script>
 <script>
+	function depositFunds(){
+var phone = document.getElementById("phone");		
+var amount = document.getElementById("amount");
+var unsername = document.getElementById("username");
+var accountbalance = document.getElementById("accountbalance");
+
+if(phone.value == ""){
+	alert("Please Enter your M-Peasa number");
+}
+else if(phone.value.length < 10){
+	alert("Please Enter your Correct M-Peasa number");
+}
+else if(amount.value == ""){
+	alert("Please Enter amount to deposit");
+}
+else if(amount.value < 10){
+	alert("Minimum deposit is Ksh. 10");
+}
+else{
+	alert("Deposit of Ksh. " + amount.value + " Was Successful");
+accountbalance.value = accountbalance.value * 1 + amount.value * 1;
+amount.value = "";
+phone.value ="";
+hideForm();
+}
+}
+
+</script>
+<script>
+function depoForm() {
+  document.getElementById("depositing").style.display = "block";
+}
+
+</script>
+<script>
+function hideForm() {
+	var phone = document.getElementById("phone");		
+var amount = document.getElementById("amount");
+  document.getElementById("depositing").style.display = "none";
+  amount.value = "";
+phone.value ="";
+}
+
+</script>
+<script>
 	function setBet(){
 
-
-var chosen =document.getElementById("txt1");
-var place =document.getElementById("placed");
-var result =document.getElementById("betresult");
+var accountbalance = document.getElementById("accountbalance");
+var chosen = document.getElementById("txt1");
+var add = document.getElementById("add");
+var place = document.getElementById("placed");
+var result = document.getElementById("betresult");
+var stake = document.getElementById("stake")
+var odd = document.getElementById("odd")
+var win = document.getElementById("win")
 
 if(chosen.value ==""){
 	alert("You have not chosen any bet");
-}else{
-	document.getElementById("placed").style.display = "block";
+}
+else if(accountbalance.value * 1 < stake.value * 1){
+	alert("Regretful! Insufficient balance in your account to place a bet of Ksh " + stake.value +" Your account balance is Ksh " + accountbalance.value +". Please top up your account");
+}
+else{
+
+document.getElementById("placed").style.display = "block";
 document.getElementById("betresult").style.display = "block";
 document.getElementById("sad").style.display = "block";
 document.getElementById("sadd").style.display = "block";
-result.value ="Pending..."
+
+win.value = stake.value * odd.value;
+add.value = stake.value * odd.value;
+result.value ="Pending...";
 place.value =chosen.value;
+accountbalance.value = accountbalance.value - stake.value;
+
+
 
 }
 }
 </script>
+</head>
 <body>
 
-	 <div class="sidebar">
+<main>
+	<div class="sidebar">
            <p> <div class="betslip">
       	      <form id = "formslip">
       	<b>Bet slip</b> <br> 
-      	<b>Your Market:</b><input type="text" name="Pick" id="pick"><br>
+      	<b>Your Market:</b><input type="text" name="Pick" id="pick" readonly><br>
       	<b>Stake:</b><input type="number" name="Pick" id="stake" value="10.0"><br>
-      	<b>Odds:</b><input type="number" name="odd" id="odd" value="0.00"><br>
-      	<b>Possible Win:</b><input type="number" name="win" id="win" value="0.00">
+      	<b>Odds:</b><input type="number" name="odd" id="odd" value="0.00" readonly><br>
+      	<b>Possible Win:</b><input type="number" name="win" id="win" value="0.00" readonly>
 
       	<p><input type="button" name="refresh" value="Refresh" id="refresh" onclick="calculation(), set();"></p>
       	<p><input type="button" name="placebet" value="Place Bet" id="placebet" onclick="setBet();"></p>
       	<form id="">
-      	<p id="sad">Your Numbers</p><input type="number" name="placebet"  id="placed">
-      	<p id="sadd">Bet Status: </p><b><input type="text" name="play" value="Pending..." id="betresult"></p></b>
+      	<p id="sad">Your Numbers</p><input type="number" name="placebet"  id="placed" readonly>
+      	<p id="sadd">Bet Status: </p><b><input type="text" name="play" value="Pending..." id="betresult" readonly></p></b>
       	</form>
       	
       	</div>
@@ -1790,10 +2037,9 @@ place.value =chosen.value;
       <div class="dropdown">
       <a href="#"> My Wallet</a>
       <div class="dropdown-content"><br>
-       <a href="payment.html" target="_blank">Deposit</a><br>
-          <br><a href="withdrawal.html">Withdraw</a><br>
-          <br><a href="#">Balance</a>
-        </div>
+       <a href="#" onclick="depoForm()">Deposit</a><br>
+          <br><a href="#" onclick="withdraw()">Withdraw</a><br>
+          </div>
     </div>
         <div class="dropdown">
         <a href="#">Join Group</a>
@@ -1805,32 +2051,44 @@ place.value =chosen.value;
       </div>
     </div>
 	<div class="main">
-		<b>You are Loged in as: <input type="text" name="accountholder" id="holder" ></b>
+	<div class = "accountdetails">
+	<b>User Name:</b><input type="text" id="username" readonly value = "MACKACHILA" ></b><b>Balance: Ksh:</b><input type="number" id="accountbalance" readonly value="10000.00">
+	</div>
 		<div class="time">
  <div id="timer"></div>
 </div>
-<input type="text" name="one" id="txt1">
-<div class="button">
-<input type="button" id="btn1" value="1" onclick="change1();">  <input type="button" id="btn2" value="2" onclick="change2();">  <input type="button" id="btn3" value="3" onclick="change3();">  <input type="button" id="btn4" value="4" onclick="change4();">  <input type="button" id="btn5" value="5" onclick="change5();">  <input type="button" id="btn6" value="6" onclick="change6();">  <input type="button" id="btn7" value="7" onclick="change7();">  <input type="button" id="btn8" value="8" onclick="change8();">  <input type="button" id="btn9" value="9" onclick="change9();"> 
-<b><p id="randomfield" style="color: green"> </p></b>
-<div class="main2">
 
-<form>
+<input type="text" name="one" id="txt1" readonly>
+<div class="button">
+<input type="button" id="btn1" value="1" onclick="change1();">  <input type="button" id="btn2" value="2" onclick="change2();">  <input type="button" id="btn3" value="3" onclick="change3();">  <input type="button" id="btn4" value="4" onclick="change4();">  <input type="button" id="btn5" value="5" onclick="change5();">  <input type="button" id="btn6" value="6" onclick="change6();">  <input type="button" id="btn7" value="7" onclick="change7();">  <input type="button" id="btn8" value="8" onclick="change8();">  <input type="button" id="btn9" value="9" onclick="change9();">
+<form name="confirmform" id="confirmform">
+<p><input type="text" name="confirm" id="confirm" readonly value="Free"><input type="button" name="ok" id="ok" value="Ok" onclick="confirmationhide()" ></p></form>
+<b id="randomfield" name = "randomfield" style="color: green"></b><br>
+<input type="number" name="add" id="add">
+<div class="main2">
+<form name = "depositing" id = "depositing" >
+	<h3>Deposit Funds:</h3>
+	<input type="number" name="phone" id="phone" placeholder="M-Pesa Number"><br><br>
+	<input type="number" name="amount" id="amount" placeholder="amount"><br><br>
+	<input type="button" name="depo" id="depo" value="Deposit" onclick="depositFunds()" ><br><br>
+	<input type="button" name="cancel" id="cancel" value="Cancel" onclick="hideForm()" >
+</form><br>
+<form name = "markets" id = "markets">
 	<b style="color: green">Click the box to chose a market</b><br>
-<b>
-      <input type="radio" id = "radio1" name="group" value="Number(s) which will appear" onclick="displayData()">Number(s) which will appear<br>
-      <input type="radio" id = "radio2" name="group" value="Number(s) which will not appear" onclick="displayData()">Number(s) which will not appear<br>
-      <input type="radio" id = "radio3" name="group" value="Number which will appear first" onclick="displayData()">Number which will appear first<br>
-      <input type="radio" id = "radio1" name="group" value="Number which will appear last" onclick="displayData()">Number which will appear last<br>
-      <input type="radio" id = "radio2" name="group" value= "A number to appear only once" onclick="displayData()">A number to appear only once<br>
-      <input type="radio" id = "radio3" name="group" value="A number to appear 2 times" onclick="displayData()">A number to appear 2 times<br>
-      <input type="radio" id = "radio3" name="group" value="A number to appear 3 times" onclick="displayData()">A number to appear 3 times<br>
+
+      <input type="radio" id = "radio1" name="group" value="Number(s) which will appear" onclick="displayData()">Number(s) which will appear<br><br>
+      <input type="radio" id = "radio2" name="group" value="Number(s) which will not appear" onclick="displayData()">Number(s) which will not appear<br><br>
+      <input type="radio" id = "radio3" name="group" value="Number which will appear first" onclick="displayData()">Number which will appear first<br><br>
+      <input type="radio" id = "radio1" name="group" value="Number which will appear last" onclick="displayData()">Number which will appear last<br><br>
+      <input type="radio" id = "radio2" name="group" value= "A number to appear only once" onclick="displayData()">A number to appear only once<br><br>
+      <input type="radio" id = "radio3" name="group" value="A number to appear 2 times" onclick="displayData()">A number to appear 2 times<br><br>
+      <input type="radio" id = "radio3" name="group" value="A number to appear 3 times" onclick="displayData()">A number to appear 3 times<br><br>
       <input type="radio" id = "radio3" name="group" value="A number to appear 4 times" onclick="displayData()">A number to appear 4 times<br></b>
     </form>
    <p> Your chosen market: <div id="output"></div>
-    <br><b><input type="button" name="howto" value="How to play" id="how" onclick="openForm()"></p>
+    <form id="howto" ><br><b><input type="button" name="howto" value="How to play" id="how" onclick="openForm()"></p></form>
     <form id="playform">
-    	<p>The game automatically generates nine random numbers every one minute. The numbers are 1-9. A number can appear more than once in a single game or can miss to appear. You therefore need to predict from the markets above whether the numbers you chose will appear ar not depending on the market you chose.<br>For example, if you chose that numbers 2 4 7 will appear in the case of market number one for example, then all of them must appear if the numbers are generated to win otherwise even if one of the three numbers miss to a ppear you lose. on the other hand if you for example bet on numbers not to appear in this case market number 2, then non of the numbers you chose should appear to win otherwise you lose. Different Markets have different Odds depenging on how easy or hard the prediction is.<br>After you decide on the market to bet on, click it's box and proceed to click the numbers you want to bet on, input your stake, refresh your stake (DO NOT REFRESH THE PAGE) and sit back to wait the timer to finish counting and you will be shown you bet results. In case if a win, you can decide to withdraw all of your money or keep it or continue with the game. You can also withdraw your deposite if you decide not to play.<br> WARNING!! DO NOT REFRESH THE PAGE AFTER YOU PLACE YOUR BET OTHERWISE YOU MIGHT LOSE YOUR MONEY AND SUPERNINE WONT BE RESPONSIBLE. Good luck</p>
+    	<p>The game automatically generates nine random numbers every one minute. The numbers are 1-9. A number can appear more than once in a single game or can miss to appear. You therefore need to predict from the markets above whether the numbers you chose will appear ar not depending on the market you chose.<br>For example, if you chose that numbers 2 4 7 will appear in the case of market number one for example, then all of them must appear if the numbers are generated for you to win otherwise even if one of the three numbers miss to a ppear you lose. on the other hand if you for example bet on numbers not to appear in this case market number 2, then non of the numbers you chose should appear to win otherwise you lose. Different Markets have different Odds depenging on how easy or hard the prediction is.<br>After you decide on the market to bet on, click it's box and proceed to click the numbers you want to bet on, input your stake, refresh your stake (DO NOT REFRESH THE PAGE) and sit back to wait the timer to finish counting and you will be shown you bet results. In case if a win, you can decide to withdraw all of your money or keep it or continue with the game. You can also withdraw your deposite if you decide not to play.<br> WARNING!! DO NOT REFRESH THE PAGE AFTER YOU PLACE YOUR BET OTHERWISE YOU MIGHT LOSE YOUR MONEY AND SUPERNINE WONT BE RESPONSIBLE. Good luck</p>
     	<br><b><input type="button" name="closehowto" value="Close" id="how" onclick="closeForm()"></p>
     </form>
 </div>
@@ -1843,6 +2101,69 @@ place.value =chosen.value;
 </form>
 
 </div>
-
+</main><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<footer class="footer">
+	<div class="left-area">
+		<h2>Contacts</h2>
+		<ul class="box">
+			<li>supernine@gmail.com</li>
+			<li>Call: 0704684936</li>
+			<li>WhatsApp: 0704688832</li>
+			<li>Jared Mackachila</li>
+		</ul>
+	</div>
+	
+	<div class="right-area">
+		<li class="link-area">
+		<h2>Useful links</h2>
+		<ul class="box h-box">
+			<li>Supernine links</li>
+		<li><a href="hgh.html"> Supernine Head office</a></li>
+		<li><a href="hgh.html"> Who owns Supernine</a></li>
+		<li><a href="hgh.html"> How to play</a></li>
+		<li><a href="hgh.html"> Is Supernine rigistered?</a></li>
+		<li><a href="hgh.html"> Supernine partners</a></li>
+		<li><a href="hgh.html"> Payment methods</a></li>
+		<li><a href="hgh.html"> About Jared Mackachila</a></li>
+		</ul>
+		</li>
+		<li>
+		</div>
+		
+			<h2>Useful links</h2>
+		<ul class="box h-box">
+			<li>Supernine links</li>
+		<li><a href="hgh.html"> Supernine Head office</a></li>
+		<li><a href="hgh.html"> Who owns Supernine</a></li>
+		<li><a href="hgh.html"> How to play</a></li>
+		<li><a href="hgh.html"> Is Supernine rigistered?</a></li>
+		<li><a href="hgh.html"> Supernine partners</a></li>
+		<li><a href="hgh.html"> Payment methods</a></li>
+		<li><a href="hgh.html"> About Jared Mackachila</a></li>
+		</ul>
+		</li>
+		<li>
+		</div>
+			<h2>News letter</h2>
+			<form action="" class="form-search">
+			<div class="search-box">
+				<input type="text" name="" id="" placeholder="Search">
+				<button class="btn" type="submit">Search</button>
+			</div>	
+			</form>
+			<p></p>
+			<div class="socials">
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-twiter"></i></a>
+				<a href="#"><i class="fa fa-instagram"></i></a>
+				<a href="#"><i class="fa fa-WhatsApp"></i></a>
+				<div class="footer-bottom">
+					<img src="C:\Users\Mackachila\Desktop\Major folder\Jared website project\footerimage.jpg" alt="">
+					<p><b>All rigths reserved by Supernine 2023</b></p>
+				</div>
+			</div>
+		</li>
+	</ul>
+</footer>
 </body>
 </html>
